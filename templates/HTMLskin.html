@@ -107,16 +107,22 @@ function add()
   numThree= parseInt(document.getElementById("third").value);
   sum = ((numOne + numTwo +numThree)/3)*10; 
   l=sum;
-       document.getElementById("answer").value = sum;
-if(l>=0 && l<=20){
+    if( isNaN(numOne) || isNaN(numTwo) || isNaN(numThree)){
+       document.getElementById("text").innerHTML ="Please enter the number values range from 1-10";}
+   else if(l>=0 && l<=20){
+               document.getElementById("answer").value = sum.toFixed();
         document.getElementById("text").innerHTML ="Consult a Doctor for Medication. Checkup is recommended.";}
   else if(l>=21 && l<=40){
+              document.getElementById("answer").value = sum.toFixed();
         document.getElementById("text").innerHTML ="medication is compulsory.Must  Go for checkup at periodical time.";}
   else if(l>=41 && l<=60){
+              document.getElementById("answer").value = sum.toFixed();
         document.getElementById("text").innerHTML="Consultation and Medication must be taken. consult doctor weekly twice and follow the mediation.";}
   else if(l>=61 && l<=80){
+              document.getElementById("answer").value = sum.toFixed();
         document.getElementById("text").innerHTML ="Medication or surgery (if should) must be taken. test and consultation is compulsory.";}
   else{
+              document.getElementById("answer").value = sum.toFixed();
         document.getElementById("text").innerHTML ="Immediate Consultation and sugery(If must) must be done. follow medication before or after surgery if done.";}  
 }
   
