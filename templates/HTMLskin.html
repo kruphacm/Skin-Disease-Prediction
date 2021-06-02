@@ -11,10 +11,18 @@
   
 </head>
     <style>
-               body
+              body::-webkit-scrollbar
+    {
+        display:none;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        
+    }
+        body
         {
-            background-color:rgba(	255, 159, 88);
-            filter: brightness(85%)
+            background-image: url('https://thumbs.gfycat.com/AmazingSpecificAndalusianhorse-size_restricted.gif');      
+            background-blend-mode: darken(70%);
+
         }
 .navbar,.navbar1,.desc{
   overflow: hidden;
@@ -25,7 +33,7 @@
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: rgb(30,144,255);
   text-align: center;
    padding: 14px 16px;
   text-decoration: none;
@@ -43,11 +51,11 @@ img
         font-size: 150%;
     }
 .navbar{
-    background-color: #555;
-
-        color: white;
-        font-size: auto;
-        font-size: 80%;
+    background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');
+    background-color: rgba(0,0,0, 0.3);
+    background-blend-mode: darken;
+    color: white;
+    font-size: 100%;
     font-style: italic;
     font-family:cursive;
         padding-left: 2%;
@@ -55,14 +63,14 @@ img
     }
 div.scrollmenu {
     padding-top: 1%;
-  background-color: #333;
+    
   overflow: auto;
   white-space: nowrap;
 }
 
 div.scrollmenu a {
   display: inline-block;
-  color: white;
+  color: rgb(30,144,255);
   text-align: center;
   padding: 14px;
   text-decoration: none;
@@ -70,13 +78,12 @@ div.scrollmenu a {
 }
 
 div.scrollmenu a:hover {
-  background-color: #777;
+  background-color: rgb(135,206,235);
 }
 .scrollmenu {
   background-color: #eee;
   width: 100%;
   height: 100%;
-  border: 1px dotted black;
   overflow-y: scroll; /* Add the ability to scroll */
 }
 
@@ -93,8 +100,6 @@ div.scrollmenu a:hover {
         .mySlides{
             display: none;
         }
-   
-
     </style>
 <script >
     var slideIndex = 0;
@@ -147,12 +152,11 @@ function add()
 <div class='navbar' id='title'>
     <p style="font-size: 140%"><img class="cropped1" src="https://drive.google.com/thumbnail?id=1JQ6epr36ugrVF7cuTlYMw9kL7J-pZrfd" width=5%; height="5%;">&nbsp HEALTH COMPANION</p></div>
     <div class="scrollmenu">
-             <a href="#home" >HOME</a>
+             <a href="homepage.html" >HOME</a>
             <a href='Consulting%20doctors.html' >CONSULTING</a>
              <a href='https://aiforecasting.herokuapp.com/' >CHECK MY HEALTH</a>
              <a href="AI%20predictions.html" >AI PREDICTIONS</a>
              <a href="Hospital.html">HOSPITAL CONSULTING</a>      
-             <a href="" >SCAN CENTRE AND HOSPITALS</a>
                  <a href="HealthyTips.html">HEALTH TIPS</a>
                  <a href="food1-1.html">FOOD INFO</a>
                   <a href="Disease%20information.html">DISEASE INFO</a>
@@ -160,8 +164,9 @@ function add()
   <br>
   <br>
   <br>
-    <div style="color: white; background-color: #333;">
-        <div class="navbar1" style='align-self:  center; color: white; font-display:auto; padding: 5%; font-size: 150%; background-color: #555;'>
+    <div style="color: white;">
+        <div class="navbar1" style='align-self:  center; color: white; font-display:auto; padding: 5%; font-size: 150%; background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190813/pngtree-digital-technology-blue-background-banner-image_298195.jpg);background-repeat: no-repeat;background-size: cover;background-color: rgba(0,0,0, 0.4);
+    background-blend-mode: darken;'>
     <div class="split left" style="float:left;width: 45%;">
    <div class="w3-content w3-section" >
        <p style="text-align: center;">CLICK RIGHT ARROW TO KNOW MORE</p>
@@ -187,28 +192,96 @@ function add()
 </div>
         </div> </div>  
 <br><br>
- <div class="login" style="  background-color: #333;font-family: cursive;"><br><br>
+ <div class="login" style="background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-blue-laser-wind-gradient-fluid-image_22189.jpg);background-repeat: no-repeat;background-size: cover;background-color: rgba(0,0,0, 0.4);
+    background-blend-mode: darken; font-family: cursive;"><br><br>
 	<h1 style="color: white; text-align: center;">Skin Disease Prediction</h1>
-     <p style="color: white; background-color: #333;padding-left: 9%; ">Enter the Symptoms numbers based on the data given below<br>1:Itching<br>2:Skin becomes dry, thickened and scaly<br>3:Rash-commonly affect face, neck, back of knees and arms<br>4:Fine, branny scaling<br>5:Upper trunk, upper arms, neck and abdomen<br>6:change of skin color, white patches<br>7:skin peeling<br>8:Vesicular, pustular<br>9:Dry type infection<br>10:moles have asymmetrical shapes<br>11:uneven colors of moles<br>12:change in size of moles<br>13:loss of hair color<br>14:patches of skin<br>15:pigmentation in the skin<br>16:oval macules<br>17:red pimples<br>18:infected hair follicles<br>19:painful lumps<br>20:Small red, tender bumps</p>
-
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post" style='color: white;  text-align:center; font-size: 150%;'>
-        <p>Enter the First Symptom:<input type="text" name="Enter the Symptom 1" placeholder="Enter the Symptom 1" required="required" /></p><br><br>
-        <p>Enter the Second Symptom:<input type="text" name="Enter the Symptom 2" placeholder="Enter the Symptom 2" required="required" /></p><br><br>
-        <p>Enter the Third Symptom:<input type="text" name="Enter the Sympotom 3" placeholder="Enter the Sympotom 3" required="required" /></p><br><br>
+        <label for="cars">Enter The Symptom One:</label>
+        <select name="cars" id="cars">
+            <option value="Itching">Itching</option>
+  <option value="Skin becomes dry, thickened and scaly">Skin becomes dry, thickened and scaly</option>
+  <option value="Rash-commonly affect face, neck, back of knees and arms">Rash-commonly affect face, neck, back of knees and arms</option>
+  <option value="Fine, branny scaling">Fine, branny scaling</option>
+  <option value="Upper trunk, upper arms, neck and abdomen">Upper trunk, upper arms, neck and abdomen</option>
+  <option value="change of skin color, white patches">change of skin color, white patches</option>
+  <option value="skin peeling">skin peeling</option>
+  <option value="Vesicular, pustular">Vesicular, pustular</option>
+  <option value="Dry type infection">Dry type infection</option>
+  <option value="moles have asymmetrical shapes">moles have asymmetrical shapes</option>
+  <option value="uneven colors of moles">uneven colors of moles</option>
+  <option value="change in size of moles">change in size of moles</option>
+  <option value="loss of hair color">loss of hair color</option>
+  <option value="patches of skin">patches of skin</option>
+  <option value="pigmentation in the skin">pigmentation in the skin</option>
+  <option value="oval macules">oval macules</option>
+  <option value="red pimples">red pimples</option>
+  <option value="infected hair follicles">infected hair follicles</option>
+  <option value="painful lumps">painful lumps</option>
+  <option value="Small red, tender bumps">Small red, tender bumps</option>
+        </select><br><br><br>
+  <label for="cars">Enter The Symptom Two:</label>
+        <select name="cars1" id="cars1">
+            <option value="Itching">Itching</option>
+  <option value="Skin becomes dry, thickened and scaly">Skin becomes dry, thickened and scaly</option>
+  <option value="Rash-commonly affect face, neck, back of knees and arms">Rash-commonly affect face, neck, back of knees and arms</option>
+  <option value="Fine, branny scaling">Fine, branny scaling</option>
+  <option value="Upper trunk, upper arms, neck and abdomen">Upper trunk, upper arms, neck and abdomen</option>
+  <option value="change of skin color, white patches">change of skin color, white patches</option>
+  <option value="skin peeling">skin peeling</option>
+  <option value="Vesicular, pustular">Vesicular, pustular</option>
+  <option value="Dry type infection">Dry type infection</option>
+  <option value="moles have asymmetrical shapes">moles have asymmetrical shapes</option>
+  <option value="uneven colors of moles">uneven colors of moles</option>
+  <option value="change in size of moles">change in size of moles</option>
+  <option value="loss of hair color">loss of hair color</option>
+  <option value="patches of skin">patches of skin</option>
+  <option value="pigmentation in the skin">pigmentation in the skin</option>
+  <option value="oval macules">oval macules</option>
+  <option value="red pimples">red pimples</option>
+  <option value="infected hair follicles">infected hair follicles</option>
+  <option value="painful lumps">painful lumps</option>
+  <option value="Small red, tender bumps">Small red, tender bumps</option>
+        </select><br><br><br>
+  <label for="cars">Enter The Symptom Three:</label>
+        <select name="cars2" id="cars2">
+            <option value="Itching">Itching</option>
+  <option value="Skin becomes dry, thickened and scaly">Skin becomes dry, thickened and scaly</option>
+  <option value="Rash-commonly affect face, neck, back of knees and arms">Rash-commonly affect face, neck, back of knees and arms</option>
+  <option value="Fine, branny scaling">Fine, branny scaling</option>
+  <option value="Upper trunk, upper arms, neck and abdomen">Upper trunk, upper arms, neck and abdomen</option>
+  <option value="change of skin color, white patches">change of skin color, white patches</option>
+  <option value="skin peeling">skin peeling</option>
+  <option value="Vesicular, pustular">Vesicular, pustular</option>
+  <option value="Dry type infection">Dry type infection</option>
+  <option value="moles have asymmetrical shapes">moles have asymmetrical shapes</option>
+  <option value="uneven colors of moles">uneven colors of moles</option>
+  <option value="change in size of moles">change in size of moles</option>
+  <option value="loss of hair color">loss of hair color</option>
+  <option value="patches of skin">patches of skin</option>
+  <option value="pigmentation in the skin">pigmentation in the skin</option>
+  <option value="oval macules">oval macules</option>
+  <option value="red pimples">red pimples</option>
+  <option value="infected hair follicles">infected hair follicles</option>
+  <option value="painful lumps">painful lumps</option>
+  <option value="Small red, tender bumps">Small red, tender bumps</option>
+        </select><br><br><br>
         <button type="submit" class="btn btn-primary btn-block btn-large" style='background-color:lightsalmon; color: white; font-size: 100%; padding: 1%;'>&nbsp&nbsp &nbsp Predict&nbsp&nbsp &nbsp  </button><br><br>
     </form>
     </div>
-   <br>
-   <br>
-     <div style='color: white; background-color: #333;text-align: center; font-size: 150%;'>
+   <br><br>
+   <br><br>
+   <br><br>
+     <div style='color: white; background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190925/pngtree-blue-colour-background-image_314361.jpg); text-align: center; font-size: 150%;;background-repeat: no-repeat;background-size: cover;background-color: rgba(0,0,0, 0.4);
+    background-blend-mode: darken;'>
          <br><br>
      {{ prediction_text }}
          <br>
          <br>
      </div><br>
    <br>
-    <div style="color: white; background-color: #333;text-align:center; font-size: 150%;"><br>
+    <div style="color: white;background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190220/ourmid/pngtree-blue-gradient-summer-creative-image_9270.jpg); text-align: center; font-size: 150%;;background-repeat: no-repeat;background-size: cover;background-color: rgba(0,0,0, 0.4);
+    background-blend-mode: darken;text-align:center; font-size: 150%;"><br>
    <br>
         <h4>CHECK THE RISK LEVEL OF DISEASE</h4><br>
         <p>Enter the range within 1-10</p><br>
