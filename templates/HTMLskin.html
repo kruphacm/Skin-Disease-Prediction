@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Skin Disease Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+    <style>
+              body::-webkit-scrollbar
+    {
+        display:none;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        
+    }
+        body
+        {
+            background-image: url('https://thumbs.gfycat.com/AmazingSpecificAndalusianhorse-size_restricted.gif');      
+            background-blend-mode: darken(70%);
+
+        }
+.navbar,.navbar1,.desc{
+  overflow: hidden;
+
+  font-family: sans-serif,monospace;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: rgb(30,144,255);
+  text-align: center;
+   padding: 14px 16px;
+  text-decoration: none;
+}
+img
+    {
+        padding-left: 4%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+.cropped1
+    {
+           padding-left: 2%;
+        vertical-align: middle;
+        font-size: 150%;
+    }
+.navbar{
+    background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');
+    background-color: rgba(0,0,0, 0.3);
+    background-blend-mode: darken;
+    color: white;
+    font-size: 100%;
+    font-style: italic;
+    font-family:cursive;
+        padding-left: 2%;
+ 
+    }
+div.scrollmenu {
+    padding-top: 1%;
+    
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+    font-family: cursive,monospace;
+}
+
+div.scrollmenu a:hover {
+  background-color: rgb(135,206,235);
+}
+.scrollmenu {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; /* Add the ability to scroll */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollmenu::-webkit-scrollbar {
+    width: 2%;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollmenu {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: 2%;  /* Firefox */
+}
+        .mySlides{
+            display: none;
+        }
+    </style>
+<script >
+    var slideIndex = 0;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+    
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+function add()
+{
+  var numOne, numTwo, numThree,sum;
+  numOne = parseInt(document.getElementById("first").value);
+  numTwo = parseInt(document.getElementById("second").value);
+  numThree= parseInt(document.getElementById("third").value);
+  sum = ((numOne + numTwo +numThree)/3)*10; 
+  l=sum;
+    if( isNaN(numOne) || isNaN(numTwo) || isNaN(numThree)){
+       document.getElementById("text").innerHTML ="Please enter the number values range from 1-10";}
+   else if(l>=0 && l<=20){
+               document.getElementById("answer").value = sum.toFixed();
+        document.getElementById("text").innerHTML ="Consult a Doctor for Medication. Checkup is recommended.";}
+  else if(l>=21 && l<=40){
+              document.getElementById("answer").value = sum.toFixed();
+        document.getElementById("text").innerHTML ="medication is compulsory.Must  Go for checkup at periodical time.";}
+  else if(l>=41 && l<=60){
+              document.getElementById("answer").value = sum.toFixed();
+        document.getElementById("text").innerHTML="Consultation and Medication must be taken. consult doctor weekly twice and follow the mediation.";}
+  else if(l>=61 && l<=80){
+              document.getElementById("answer").value = sum.toFixed();
+        document.getElementById("text").innerHTML ="Medication or surgery (if should) must be taken. test and consultation is compulsory.";}
+  else{
+              document.getElementById("answer").value = sum.toFixed();
+        document.getElementById("text").innerHTML ="Immediate Consultation and sugery(If must) must be done. follow medication before or after surgery if done.";}  
+}
+  
+</script>
+<body >
+<div class='navbar' id='title'>
+    <p style="font-size: 140%"><img class="cropped1" src="https://drive.google.com/thumbnail?id=1JQ6epr36ugrVF7cuTlYMw9kL7J-pZrfd" width=5%; height="5%;">&nbsp HEALTH COMPANION</p></div>
+    <div class="scrollmenu">
+             <a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/" >HOME</a>
+            <a href='https://kruphacm.github.io/health-improviser-and-monitoring-system/Consulting%20doctors.html' >CONSULTING</a>
+             <a href='https://aiforecasting.herokuapp.com/' >CHECK MY HEALTH</a>
+             <a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/AI%20predictions.html" >AI PREDICTIONS</a>
+             <a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Hospital.html">HOSPITAL CONSULTING</a>      
+                 <a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/HealthyTips.html">HEALTH TIPS</a>
+                 <a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/food1-1.html">FOOD INFO</a>
+                  <a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Disease%20information.html">DISEASE INFO</a>
+             </div>
+  <br>
+  <br>
+  <br>
+    <div style="color: white;">
+        <div class="navbar1" style='align-self:  center; color: white; font-display:auto; padding: 5%; font-size: 150%; background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190813/pngtree-digital-technology-blue-background-banner-image_298195.jpg);background-repeat: no-repeat;background-size: cover;background-color: rgba(0,0,0, 0.4);
+    background-blend-mode: darken;'>
+    <div class="split left" style="float:left;width: 45%;">
+   <div class="w3-content w3-section" >
+       <p style="text-align: center;">CLICK RIGHT ARROW TO KNOW MORE</p>
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="plusDivs(-1)" style="float:left;padding-top: -15;">❮</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a class="right" onclick="plusDivs(1)" style="float:right;">❯</a> 
+       <div class='id1'><img class="mySlides" src="https://thumbs.dreamstime.com/b/baby-having-eczema-face-illustration-baby-having-eczema-face-119870897.jpg" width="500px" height="250px"style="align-content: center;"></div>
+       <div class='id2'><img class="mySlides"  src="https://i.pinimg.com/originals/c6/1c/55/c61c5570ca42a60fe1b5904dde5ecca2.jpg"width="500px" height="250px"></div>
+      <div class='id3'> <img class="mySlides"  src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX31326858.jpg" width="500px" height="250px"></div>     
+    <div class='id3'> <img class="mySlides"  src="https://thumbs.dreamstime.com/b/types-acne-vector-types-acne-vector-illustration-info-image-graphic-use-132802885.jpg" width="500px" height="250px"></div>
+       <div class='id4'> <img class="mySlides"  src="https://www.verywellhealth.com/thmb/GmfzGuCPokTF14Dk06EaWvvROzo=/3125x2084/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-melanoma-514215_final-01-3b091d9a68074ba7b5a1cb6d8287cf92.png" width="500px" height="250px"></div>
+       <div class='id5'> <img class="mySlides"  src="https://ayurhealthcare.com.au/wp-content/uploads/2020/01/vitiligo.jpg" width="500px" height="250px"></div>
+       <div class='id6'> <img class="mySlides"  src="https://media.istockphoto.com/vectors/skin-diseases-derma-infection-eczema-and-psoriasis-dermatology-vector-vector-id1262261870?k=6&m=1262261870&s=612x612&w=0&h=Kv8YDOisoZ8hxmv68TFPETV9kCUVu-OJemDt087R8K8=" width="500px" height="250px"></div>
+       <div class='id7'> <img class="mySlides"  src="https://media.istockphoto.com/vectors/skin-diseases-derma-infection-eczema-and-psoriasis-dermatology-vector-vector-id1262261870?k=6&m=1262261870&s=612x612&w=0&h=Kv8YDOisoZ8hxmv68TFPETV9kCUVu-OJemDt087R8K8=" width="500px" height="250px"></div>
+       <div class='id8'> <img class="mySlides"  src="https://www.creative-biolabs.com/drug-discovery/therapeutics/images/Dermatophytosis-1.jpg" width="500px" height="250px"></div>
+   
+</div>
+            </div>
+<div class="split right" style="float:right;width: 50%;">
+     <br>
+    <p style="padding-left: 2%; ">SKIN DISEASE PREDICTION:</p>
+        <p style="padding-left: 2%; "> This prediction focusses on predicting diseases like Eczema,Tinea versicolo,Tinea faciei,Melanoma,vitiligo and acne.Here Given a list of symptoms which help the machine to prediction the disease and its Treatment. Give the appropriate Disease Number in the  Symptom column and predicct the disease.</p><br><br><br><br>
+</div>
+        </div> </div>  
+<br><br>
+ <div class="login" style="background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-blue-laser-wind-gradient-fluid-image_22189.jpg);background-repeat: no-repeat;background-size: cover;background-color: rgba(0,0,0, 0.4);
+    background-blend-mode: darken; font-family: cursive;"><br><br>
+	<h1 style="color: white; text-align: center;">Skin Disease Prediction</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post" style='color: white;  text-align:center; font-size: 150%;'>
+        <label for="cars">Enter The Symptom One:</label>
+        <select name="cars" id="cars">
+            <option value="Itching">Itching</option>
+  <option value="Skin becomes dry, thickened and scaly">Skin becomes dry, thickened and scaly</option>
+  <option value="Rash-commonly affect face, neck, back of knees and arms">Rash-commonly affect face, neck, back of knees and arms</option>
+  <option value="Fine, branny scaling">Fine, branny scaling</option>
+  <option value="Upper trunk, upper arms, neck and abdomen">Upper trunk, upper arms, neck and abdomen</option>
+  <option value="change of skin color, white patches">change of skin color, white patches</option>
+  <option value="skin peeling">skin peeling</option>
+  <option value="Vesicular, pustular">Vesicular, pustular</option>
+  <option value="Dry type infection">Dry type infection</option>
+  <option value="moles have asymmetrical shapes">moles have asymmetrical shapes</option>
+  <option value="uneven colors of moles">uneven colors of moles</option>
+  <option value="change in size of moles">change in size of moles</option>
+  <option value="loss of hair color">loss of hair color</option>
+  <option value="patches of skin">patches of skin</option>
+  <option value="pigmentation in the skin">pigmentation in the skin</option>
+  <option value="oval macules">oval macules</option>
+  <option value="red pimples">red pimples</option>
+  <option value="infected hair follicles">infected hair follicles</option>
+  <option value="painful lumps">painful lumps</option>
+  <option value="Small red, tender bumps">Small red, tender bumps</option>
+        </select><br><br><br>
+  <label for="cars">Enter The Symptom Two:</label>
+        <select name="cars1" id="cars1">
+            <option value="Itching">Itching</option>
+  <option value="Skin becomes dry, thickened and scaly">Skin becomes dry, thickened and scaly</option>
+  <option value="Rash-commonly affect face, neck, back of knees and arms">Rash-commonly affect face, neck, back of knees and arms</option>
+  <option value="Fine, branny scaling">Fine, branny scaling</option>
+  <option value="Upper trunk, upper arms, neck and abdomen">Upper trunk, upper arms, neck and abdomen</option>
+  <option value="change of skin color, white patches">change of skin color, white patches</option>
+  <option value="skin peeling">skin peeling</option>
+  <option value="Vesicular, pustular">Vesicular, pustular</option>
+  <option value="Dry type infection">Dry type infection</option>
+  <option value="moles have asymmetrical shapes">moles have asymmetrical shapes</option>
+  <option value="uneven colors of moles">uneven colors of moles</option>
+  <option value="change in size of moles">change in size of moles</option>
+  <option value="loss of hair color">loss of hair color</option>
+  <option value="patches of skin">patches of skin</option>
+  <option value="pigmentation in the skin">pigmentation in the skin</option>
+  <option value="oval macules">oval macules</option>
+  <option value="red pimples">red pimples</option>
+  <option value="infected hair follicles">infected hair follicles</option>
+  <option value="painful lumps">painful lumps</option>
+  <option value="Small red, tender bumps">Small red, tender bumps</option>
+        </select><br><br><br>
+  <label for="cars">Enter The Symptom Three:</label>
+        <select name="cars2" id="cars2">
+            <option value="Itching">Itching</option>
+  <option value="Skin becomes dry, thickened and scaly">Skin becomes dry, thickened and scaly</option>
+  <option value="Rash-commonly affect face, neck, back of knees and arms">Rash-commonly affect face, neck, back of knees and arms</option>
+  <option value="Fine, branny scaling">Fine, branny scaling</option>
+  <option value="Upper trunk, upper arms, neck and abdomen">Upper trunk, upper arms, neck and abdomen</option>
+  <option value="change of skin color, white patches">change of skin color, white patches</option>
+  <option value="skin peeling">skin peeling</option>
+  <option value="Vesicular, pustular">Vesicular, pustular</option>
+  <option value="Dry type infection">Dry type infection</option>
+  <option value="moles have asymmetrical shapes">moles have asymmetrical shapes</option>
+  <option value="uneven colors of moles">uneven colors of moles</option>
+  <option value="change in size of moles">change in size of moles</option>
+  <option value="loss of hair color">loss of hair color</option>
+  <option value="patches of skin">patches of skin</option>
+  <option value="pigmentation in the skin">pigmentation in the skin</option>
+  <option value="oval macules">oval macules</option>
+  <option value="red pimples">red pimples</option>
+  <option value="infected hair follicles">infected hair follicles</option>
+  <option value="painful lumps">painful lumps</option>
+  <option value="Small red, tender bumps">Small red, tender bumps</option>
+        </select><br><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large" style='background-color:lightsalmon; color: white; font-size: 100%; padding: 1%;'>&nbsp&nbsp &nbsp Predict&nbsp&nbsp &nbsp  </button><br><br>
+    </form>
+    </div>
+   <br><br>
+   <br><br>
+   <br><br>
+     <div style='color: white; background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190925/pngtree-blue-colour-background-image_314361.jpg); text-align: center; font-size: 150%;;background-repeat: no-repeat;background-size: cover;background-color: rgba(0,0,0, 0.4);
+    background-blend-mode: darken;'>
+         <br><br>
+     {{ prediction_text }}
+         <br>
+         <br>
+     </div><br>
+   <br>
+    <div style="color: white;background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190220/ourmid/pngtree-blue-gradient-summer-creative-image_9270.jpg); text-align: center; font-size: 150%;;background-repeat: no-repeat;background-size: cover;background-color: rgba(0,0,0, 0.4);
+    background-blend-mode: darken;text-align:center; font-size: 150%;"><br>
+   <br>
+        <h4>CHECK THE RISK LEVEL OF DISEASE</h4><br>
+        <p>Enter the range within 1-10</p><br>
+        <p>Enter the effect of Symptom 1:<input id="first"></p>
+        <p>Enter the effect of Symptom 2:<input id="second"></p>
+        <p>Enter the effect of Symptom 3:<input id="third"></p>
+        <button onclick="add()"  style='background-color:lightsalmon; color: white; font-size: 100%; padding: 2%;'>Show Risk level</button>
+        <p>RISK LEVEL at <input id="answer"> %</p><br><p id='text'></p>
+        <br>
+        <br>
+        <br>
+    </div>
+    <br><br>
+    <div style="background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');background-color: rgba(0,0,0, 0.6);background-blend-mode: darken;color: white;font-size: 100%;font-style: italic;font-family:cursive;"><br>
+        <p style="padding-left: 5%;">Contact<br>Mobile:1234567891<br>Email:abcd123@gmail.com</p>
+        <p style="padding-left: 5%; ">Follow us on<img src="https://www.beachrealtync.com/sites/default/files/uploads/socials_3.png" width=10% style="padding-left: 2%;
+        vertical-align: middle" ></p><br>
+    </div>
+</body>
+</html>
